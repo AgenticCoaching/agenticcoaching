@@ -1,0 +1,36 @@
+{
+  "id": "setup",
+  "name": "Athlete Setup",
+  "type": "automation",
+  "version": "0.1.0",
+  "description": "Onboards new users and organizations into AgenticCoaching with profile + operating model setup for solo athletes, household multi-athlete setups, and coach-with-clients setups.",
+  "capabilities": [
+    "create-athlete-profile",
+    "create-household-host-profile",
+    "create-coach-workspace",
+    "register-clients",
+    "initialize-folder-structure",
+    "configure-checkin-preferences",
+    "set-training-goals"
+  ],
+  "inputs": [
+    "user-mode",
+    "person-profile",
+    "goals",
+    "sport-focus",
+    "schedule-constraints"
+  ],
+  "outputs": [
+    "athlete-profile",
+    "workspace-structure",
+    "onboarding-summary"
+  ],
+  "dependencies": [
+    "automation-daily-checkin",
+    "coach-running",
+    "coach-cycling",
+    "coach-strength",
+    "coach-nutrition"
+  ],
+  "status": "scaffold"
+}

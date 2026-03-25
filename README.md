@@ -4,6 +4,7 @@ Claude Marketplace-style multi-plugin monorepo for coaching + fitness automation
 
 ## Initial plugin set
 
+- Setup
 - Connector: Strava
 - Connector: Garmin
 - Automation: Daily Check-in
@@ -16,6 +17,7 @@ Claude Marketplace-style multi-plugin monorepo for coaching + fitness automation
 
 ```text
 plugins/
+  setup/
   connector-strava/
   connector-garmin/
   automation-daily-checkin/
@@ -49,3 +51,10 @@ Each plugin folder contains:
 4. Add workout analysis pipeline (ingest -> features -> coach summary).
 5. Add coach engines (nutrition/running/cycling/strength) using shared context.
 6. Add CI validation for plugin manifests against schema.
+
+
+## Deployment models
+
+- **Solo athlete**: one user, one athlete profile.
+- **Household host**: one workspace with multiple athlete profiles.
+- **Coach with clients**: one coach workspace managing many client athlete profiles.

@@ -36,6 +36,11 @@
       "id": "coach-strength",
       "path": "plugins/coach-strength",
       "manifest": "plugins/coach-strength/plugin.json"
+    },
+    {
+      "id": "setup",
+      "path": "plugins/setup",
+      "manifest": "plugins/setup/plugin.json"
     }
   ]
 }
