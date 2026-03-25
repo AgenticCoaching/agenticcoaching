@@ -7,7 +7,6 @@ Claude Marketplace-style multi-plugin monorepo for coaching + fitness automation
 - Connector: Strava
 - Connector: Garmin
 - Automation: Daily Check-in
-- Workout Analysis
 - Coach: Nutrition
 - Coach: Running
 - Coach: Cycling
@@ -20,7 +19,6 @@ plugins/
   connector-strava/
   connector-garmin/
   automation-daily-checkin/
-  workout-analysis/
   coach-nutrition/
   coach-running/
   coach-cycling/
@@ -32,6 +30,9 @@ schemas/
 ```
 
 ## How this works
+
+Workout analysis is embedded in each coach plugin (running/cycling/strength/nutrition), not a separate marketplace plugin.
+
 
 Each plugin folder contains:
 

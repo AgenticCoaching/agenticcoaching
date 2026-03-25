@@ -5,9 +5,12 @@
   "version": "0.1.0",
   "description": "Garmin connector for activities, health metrics, and workout sync.",
   "capabilities": [
-    "oauth-connect",
     "fetch-activities",
     "fetch-health-metrics",
+    "oauth-connect",
+    "store-raw-fit-or-gpx",
+    "store-source-reference",
+    "store-workout-day-folder",
     "sync-workouts"
   ],
   "inputs": [

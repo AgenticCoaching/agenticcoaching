@@ -5,10 +5,12 @@
   "version": "0.1.0",
   "description": "Strength coach for athlete-specific robustness and mobility work.",
   "capabilities": [
+    "analyze-workout-day",
+    "load-progression",
+    "movement-balance",
     "plan-strength",
     "select-exercises",
-    "load-progression",
-    "movement-balance"
+    "write-workout-notes"
   ],
   "inputs": [
     "checkin-scores",
@@ -19,7 +21,9 @@
     "weekly-strength-plan"
   ],
   "dependencies": [
-    "automation-daily-checkin"
+    "automation-daily-checkin",
+    "connector-strava",
+    "connector-garmin"
   ],
   "status": "scaffold"
 }

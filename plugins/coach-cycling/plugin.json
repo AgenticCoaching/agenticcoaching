@@ -5,9 +5,11 @@
   "version": "0.1.0",
   "description": "Cycling coaching for endurance, intensity distribution, and periodization.",
   "capabilities": [
-    "plan-cycling-week",
     "adjust-session",
-    "cross-training-alignment"
+    "analyze-workout-day",
+    "cross-training-alignment",
+    "plan-cycling-week",
+    "write-workout-notes"
   ],
   "inputs": [
     "checkin-scores",
@@ -18,7 +20,8 @@
     "weekly-plan"
   ],
   "dependencies": [
-    "workout-analysis"
+    "connector-strava",
+    "connector-garmin"
   ],
   "status": "scaffold"
 }

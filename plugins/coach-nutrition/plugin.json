@@ -5,10 +5,12 @@
   "version": "0.1.0",
   "description": "Performance nutrition coaching with meal logging and fueling guidance.",
   "capabilities": [
+    "analyze-workout-day",
+    "fueling-feedback",
+    "hydration-review",
     "log-meals",
     "macro-estimation",
-    "fueling-feedback",
-    "hydration-review"
+    "write-workout-notes"
   ],
   "inputs": [
     "meal-log",
@@ -19,7 +21,9 @@
     "recommendations"
   ],
   "dependencies": [
-    "automation-daily-checkin"
+    "automation-daily-checkin",
+    "connector-strava",
+    "connector-garmin"
   ],
   "status": "scaffold"
 }

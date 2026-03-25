@@ -5,9 +5,12 @@
   "version": "0.1.0",
   "description": "OAuth Strava connector for activities, streams, and daily sync.",
   "capabilities": [
-    "oauth-connect",
     "fetch-activities",
     "fetch-streams",
+    "oauth-connect",
+    "store-raw-fit-or-gpx",
+    "store-source-reference",
+    "store-workout-day-folder",
     "sync-daily"
   ],
   "inputs": [
