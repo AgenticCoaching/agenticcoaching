@@ -1,0 +1,27 @@
+{
+  "id": "automation-daily-checkin",
+  "name": "Daily Check-in Automation",
+  "type": "automation",
+  "version": "0.1.0",
+  "description": "Sends contextual morning check-ins and captures 1-5 readiness scores.",
+  "capabilities": [
+    "schedule-checkin",
+    "send-buttons",
+    "capture-responses",
+    "store-checkins"
+  ],
+  "inputs": [
+    "athlete-profile",
+    "yesterday-summary",
+    "calendar-context"
+  ],
+  "outputs": [
+    "checkin-record",
+    "score-summary"
+  ],
+  "dependencies": [
+    "connector-strava",
+    "connector-garmin"
+  ],
+  "status": "scaffold"
+}

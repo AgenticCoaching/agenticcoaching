@@ -1,0 +1,25 @@
+{
+  "id": "coach-strength",
+  "name": "Strength Coach",
+  "type": "coach",
+  "version": "0.1.0",
+  "description": "Strength coach for athlete-specific robustness and mobility work.",
+  "capabilities": [
+    "plan-strength",
+    "select-exercises",
+    "load-progression",
+    "movement-balance"
+  ],
+  "inputs": [
+    "checkin-scores",
+    "sport-focus"
+  ],
+  "outputs": [
+    "strength-session",
+    "weekly-strength-plan"
+  ],
+  "dependencies": [
+    "automation-daily-checkin"
+  ],
+  "status": "scaffold"
+}

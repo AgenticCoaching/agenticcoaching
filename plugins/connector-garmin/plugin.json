@@ -1,0 +1,23 @@
+{
+  "id": "connector-garmin",
+  "name": "Garmin Connector",
+  "type": "connector",
+  "version": "0.1.0",
+  "description": "Garmin connector for activities, health metrics, and workout sync.",
+  "capabilities": [
+    "oauth-connect",
+    "fetch-activities",
+    "fetch-health-metrics",
+    "sync-workouts"
+  ],
+  "inputs": [
+    "date-range",
+    "athlete-id"
+  ],
+  "outputs": [
+    "activities",
+    "health-metrics"
+  ],
+  "dependencies": [],
+  "status": "scaffold"
+}

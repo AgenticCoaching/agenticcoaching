@@ -1,0 +1,25 @@
+{
+  "id": "coach-nutrition",
+  "name": "Nutrition Coach",
+  "type": "coach",
+  "version": "0.1.0",
+  "description": "Performance nutrition coaching with meal logging and fueling guidance.",
+  "capabilities": [
+    "log-meals",
+    "macro-estimation",
+    "fueling-feedback",
+    "hydration-review"
+  ],
+  "inputs": [
+    "meal-log",
+    "training-load"
+  ],
+  "outputs": [
+    "nutrition-summary",
+    "recommendations"
+  ],
+  "dependencies": [
+    "automation-daily-checkin"
+  ],
+  "status": "scaffold"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "coach-running",
+  "name": "Running Coach",
+  "type": "coach",
+  "version": "0.1.0",
+  "description": "Running-focused coaching for planning, progression, and adaptation.",
+  "capabilities": [
+    "plan-run-week",
+    "adjust-session",
+    "injury-aware-mods",
+    "race-specific-blocks"
+  ],
+  "inputs": [
+    "checkin-scores",
+    "workout-analysis"
+  ],
+  "outputs": [
+    "daily-plan",
+    "weekly-plan"
+  ],
+  "dependencies": [
+    "workout-analysis"
+  ],
+  "status": "scaffold"
+}

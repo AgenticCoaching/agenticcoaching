@@ -1,0 +1,46 @@
+{
+  "marketplace": "AgenticCoaching",
+  "version": "0.1.0",
+  "plugins": [
+    {
+      "id": "connector-strava",
+      "path": "plugins/connector-strava",
+      "manifest": "plugins/connector-strava/plugin.json"
+    },
+    {
+      "id": "connector-garmin",
+      "path": "plugins/connector-garmin",
+      "manifest": "plugins/connector-garmin/plugin.json"
+    },
+    {
+      "id": "automation-daily-checkin",
+      "path": "plugins/automation-daily-checkin",
+      "manifest": "plugins/automation-daily-checkin/plugin.json"
+    },
+    {
+      "id": "workout-analysis",
+      "path": "plugins/workout-analysis",
+      "manifest": "plugins/workout-analysis/plugin.json"
+    },
+    {
+      "id": "coach-nutrition",
+      "path": "plugins/coach-nutrition",
+      "manifest": "plugins/coach-nutrition/plugin.json"
+    },
+    {
+      "id": "coach-running",
+      "path": "plugins/coach-running",
+      "manifest": "plugins/coach-running/plugin.json"
+    },
+    {
+      "id": "coach-cycling",
+      "path": "plugins/coach-cycling",
+      "manifest": "plugins/coach-cycling/plugin.json"
+    },
+    {
+      "id": "coach-strength",
+      "path": "plugins/coach-strength",
+      "manifest": "plugins/coach-strength/plugin.json"
+    }
+  ]
+}

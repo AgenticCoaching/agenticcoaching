@@ -1,0 +1,23 @@
+{
+  "id": "connector-strava",
+  "name": "Strava Connector",
+  "type": "connector",
+  "version": "0.1.0",
+  "description": "OAuth Strava connector for activities, streams, and daily sync.",
+  "capabilities": [
+    "oauth-connect",
+    "fetch-activities",
+    "fetch-streams",
+    "sync-daily"
+  ],
+  "inputs": [
+    "date-range",
+    "athlete-id"
+  ],
+  "outputs": [
+    "activities",
+    "streams"
+  ],
+  "dependencies": [],
+  "status": "scaffold"
+}
