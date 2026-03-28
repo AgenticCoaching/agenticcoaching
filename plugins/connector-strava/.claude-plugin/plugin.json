@@ -1,0 +1,31 @@
+{
+  "name": "agenticcoaching-strava",
+  "version": "0.1.0",
+  "description": "Local coaching-focused Strava MCP for athlete profile, workouts, gear, and routes.",
+  "author": {
+    "name": "AgenticCoaching",
+    "email": "support@agenticcoaching.dev",
+    "url": "https://agenticcoaching.dev"
+  },
+  "homepage": "https://github.com/AgenticCoaching/agenticcoaching",
+  "repository": "https://github.com/AgenticCoaching/agenticcoaching",
+  "license": "MIT",
+  "keywords": [
+    "strava",
+    "coaching",
+    "fitness",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": {
+    "strava-coach": {
+      "command": "python3",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/scripts/run_local_mcp.py"
+      ],
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      }
+    }
+  }
+}

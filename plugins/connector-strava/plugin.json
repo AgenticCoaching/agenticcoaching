@@ -3,24 +3,37 @@
   "name": "Strava Connector",
   "type": "connector",
   "version": "0.1.0",
-  "description": "OAuth Strava connector for activities, streams, and daily sync.",
+  "description": "Local coaching-focused Strava MCP for athlete profile, workout data, routes, and scheduled polling sync.",
   "capabilities": [
+    "fetch-athlete-profile",
+    "fetch-athlete-zones",
+    "fetch-athlete-stats",
     "fetch-activities",
-    "fetch-streams",
-    "oauth-connect",
-    "store-raw-fit-or-gpx",
-    "store-source-reference",
+    "fetch-activity-detail",
+    "fetch-activity-laps",
+    "fetch-activity-zones",
+    "fetch-activity-streams",
+    "update-activity-metadata",
+    "fetch-gear",
+    "fetch-routes",
+    "export-route-gpx",
+    "export-route-tcx",
     "store-workout-day-folder",
-    "sync-daily"
+    "sync-polling"
   ],
   "inputs": [
     "date-range",
-    "athlete-id"
+    "activity-id",
+    "athlete-id",
+    "route-id",
+    "gear-id"
   ],
   "outputs": [
     "activities",
-    "streams"
+    "activity-bundles",
+    "streams",
+    "route-files"
   ],
   "dependencies": [],
-  "status": "scaffold"
+  "status": "beta"
 }

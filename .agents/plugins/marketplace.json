@@ -1,0 +1,20 @@
+{
+  "name": "agenticcoaching",
+  "interface": {
+    "displayName": "AgenticCoaching"
+  },
+  "plugins": [
+    {
+      "name": "connector-strava",
+      "source": {
+        "source": "local",
+        "path": "./plugins/connector-strava"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Health & Fitness"
+    }
+  ]
+}
