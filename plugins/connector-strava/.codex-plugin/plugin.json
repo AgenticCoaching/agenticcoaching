@@ -34,8 +34,8 @@
     "defaultPrompt": [
       "Pull recent Strava workouts, fetch coaching metrics, update activity descriptions, and export routes"
     ],
-    "composerIcon": "./assets/strava-small.svg",
-    "logo": "./assets/strava.svg",
+    "composerIcon": "./assets/AgenticCoachingLogo.png",
+    "logo": "./assets/AgenticCoachingLogo.png",
     "screenshots": [],
     "brandColor": "#FC5200"
   }

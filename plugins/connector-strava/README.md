@@ -27,22 +27,22 @@ Implemented as a local Python MCP server plus Claude Code and Codex plugin wirin
 
 ## Setup
 
-The local server uses environment variables for Strava auth in v1.
+The local server uses Strava OAuth credentials in v1.
 
-Required:
+Required durable credentials:
 
-- `STRAVA_ACCESS_TOKEN`
+- `STRAVA_CLIENT_ID`
+- `STRAVA_CLIENT_SECRET`
+- `STRAVA_REFRESH_TOKEN`
 
 Optional:
 
+- `STRAVA_ACCESS_TOKEN`
 - `STRAVA_ACCESS_TOKEN_EXPIRES_AT`
-- `STRAVA_REFRESH_TOKEN`
-- `STRAVA_CLIENT_ID`
-- `STRAVA_CLIENT_SECRET`
 - `STRAVA_STORAGE_ROOT`
 - `STRAVA_ATHLETE_SLUG`
 
-If client id, client secret, and refresh token are present, the server refreshes the access token in memory while it is running.
+The access token is runtime cache only. If client id, client secret, and refresh token are present, the server refreshes the access token in memory while it is running.
 
 ## Sync behavior
 
