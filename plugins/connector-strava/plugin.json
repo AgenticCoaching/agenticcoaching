@@ -2,7 +2,7 @@
   "id": "connector-strava",
   "name": "Strava Connector",
   "type": "connector",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Local coaching-focused Strava MCP for athlete profile, workout data, routes, and scheduled polling sync.",
   "capabilities": [
     "fetch-athlete-profile",

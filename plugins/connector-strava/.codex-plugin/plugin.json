@@ -1,6 +1,6 @@
 {
   "name": "agenticcoaching-strava",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Local coaching-focused Strava MCP for athlete profile, workouts, gear, and routes.",
   "author": {
     "name": "AgenticCoaching",
