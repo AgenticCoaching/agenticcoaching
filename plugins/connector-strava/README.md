@@ -2,6 +2,10 @@
 
 Local coaching-focused Strava MCP for athlete profile, workout data, routes, and scheduled polling sync.
 
+In Claude, this plugin requires Claude in Chrome MCP for app setup and scope or token repair flows.
+
+Claude enforces that requirement through the plugin's default agent configuration in `settings.json`, which activates the `strava-connector` agent with `requiredMcpServers: ["Claude in Chrome"]`.
+
 ## Status
 
 Implemented as a local Python MCP server plus Claude Code and Codex plugin wiring.
@@ -29,6 +33,15 @@ Implemented as a local Python MCP server plus Claude Code and Codex plugin wirin
 ## Setup
 
 The local server uses Strava OAuth credentials in v1.
+
+Claude in Chrome MCP is required in Claude for:
+
+- creating the personal Strava app
+- repairing app configuration
+- re-authorizing scopes
+- recovering from revoked or rotated refresh tokens
+
+In Codex, those setup steps can be done manually in the browser instead.
 
 Required durable credentials:
 
@@ -70,3 +83,4 @@ Recommended requested Strava scope set for this connector:
 - `references/storage-contract.md` — required athlete/day folder ingestion contract.
 - `skills/setup-strava-connector/SKILL.md` — local setup flow
 - `skills/sync-recent-workouts/SKILL.md` — scheduled polling sync flow
+- `agents/strava-connector.md` — Claude default agent requiring Claude in Chrome MCP
