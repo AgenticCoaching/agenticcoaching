@@ -150,6 +150,9 @@ class StravaApiClient:
     def get_stats(self, athlete_id: int) -> Dict[str, Any]:
         return self._request("GET", f"/athletes/{athlete_id}/stats")
 
+    def update_athlete(self, payload: Dict[str, Any]) -> Dict[str, Any]:
+        return self._request("PUT", "/athlete", json_body=payload)
+
     def list_activities(
         self,
         *,

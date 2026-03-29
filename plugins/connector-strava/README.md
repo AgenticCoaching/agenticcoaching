@@ -11,6 +11,7 @@ Implemented as a local Python MCP server plus Claude Code and Codex plugin wirin
 - `strava_athlete_get_profile`
 - `strava_athlete_get_zones`
 - `strava_athlete_get_stats`
+- `strava_athlete_update`
 - `strava_activities_list`
 - `strava_activity_get`
 - `strava_activity_get_laps`
@@ -53,6 +54,10 @@ Recommended requested Strava scope set for this connector:
 - `activity:read`
 - `activity:read_all`
 - `activity:write`
+
+`strava_athlete_update` currently supports:
+
+- `weight`
 
 ## Sync behavior
 

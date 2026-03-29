@@ -76,6 +76,18 @@ class StravaCoachMCPServer:
         )
         self._register(
             ToolSpec(
+                name="strava_athlete_update",
+                description="Update athlete profile fields supported by Strava.",
+                input_schema=_json_schema(
+                    {
+                        "weight": {"type": "number", "description": "Athlete weight in kilograms."},
+                    }
+                ),
+                handler=self._handle_athlete_update,
+            )
+        )
+        self._register(
+            ToolSpec(
                 name="strava_activities_list",
                 description="List recent or date-ranged athlete activities.",
                 input_schema=_json_schema(
@@ -303,6 +315,16 @@ class StravaCoachMCPServer:
     def _handle_athlete_get_stats(self, args: JsonDict) -> JsonDict:
         athlete_id = self._resolve_authenticated_athlete_id(args.get("athlete_id"))
         return {"athlete_id": athlete_id, "stats": self.api_client.get_stats(athlete_id)}
+
+    def _handle_athlete_update(self, args: JsonDict) -> JsonDict:
+        payload = {key: value for key, value in args.items() if key in {"weight"} and value is not None}
+        if not payload:
+            raise ValueError("strava_athlete_update requires: weight.")
+        athlete = self.api_client.update_athlete(payload)
+        return {
+            "athlete": athlete,
+            "applied_updates": payload,
+        }
 
     def _handle_activities_list(self, args: JsonDict) -> JsonDict:
         activities = self.api_client.list_activities(
