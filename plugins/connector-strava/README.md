@@ -44,6 +44,16 @@ Optional:
 
 The access token is runtime cache only. If client id, client secret, and refresh token are present, the server refreshes the access token in memory while it is running.
 
+Recommended requested Strava scope set for this connector:
+
+- `read`
+- `read_all`
+- `profile:read_all`
+- `profile:write`
+- `activity:read`
+- `activity:read_all`
+- `activity:write`
+
 ## Sync behavior
 
 - v1 uses scheduled polling, not webhooks

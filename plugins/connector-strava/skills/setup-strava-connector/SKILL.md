@@ -36,11 +36,15 @@ The access token should be treated as a cache, not durable state. The refresh to
    - `/Users/arne/Development/AgenticCoaching/agenticcoaching/plugins/connector-strava/assets/AgenticCoachingLogo.png`
 3. Use the athlete-specific naming pattern `Agentic Coaching - <athlete-slug>`.
 4. Use `localhost` as the callback domain for local development.
-5. Check whether the currently granted scopes are sufficient:
+5. Check whether the currently granted scopes include the full requested scope set:
+   - `read`
+   - `read_all`
+   - `profile:read_all`
+   - `profile:write`
+   - `activity:read`
    - `activity:read_all`
    - `activity:write`
-   - `profile:read_all`
-6. If the current app authorization is missing any required scope, re-run Strava authorization for the same app and replace the locally stored refresh token with the newest returned refresh token.
+6. If the current app authorization is missing any required scope, re-run Strava authorization for the same app with the full scope set and replace the locally stored refresh token with the newest returned refresh token.
 7. If the locally stored refresh token no longer works because it was revoked or rotated on Strava, re-authorize the same app and replace the stored refresh token.
 8. Persist only these durable local credentials:
    - `STRAVA_CLIENT_ID`
@@ -59,6 +63,8 @@ The access token should be treated as a cache, not durable state. The refresh to
   - `/Users/arne/Development/AgenticCoaching/agenticcoaching/plugins/connector-strava/assets/AgenticCoachingLogo.png`
 - Prefer repairing the existing `My API Application` for the athlete instead of creating a new app unless the app is missing or irreparably misconfigured.
 - When Strava returns a new refresh token, overwrite the previously stored refresh token immediately. Older refresh tokens become invalid as soon as a new one is issued.
+- The authorization request should ask for this exact comma-delimited scope set:
+  - `read,read_all,profile:read_all,profile:write,activity:read,activity:read_all,activity:write`
 
 ## Guardrails
 
