@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "plugins": [
     {
-      "id": "connector-strava",
-      "path": "plugins/connector-strava",
-      "manifest": "plugins/connector-strava/plugin.json"
+      "id": "strava-connector",
+      "path": "plugins/strava-connector",
+      "manifest": "plugins/strava-connector/plugin.json"
     },
     {
       "id": "connector-garmin",

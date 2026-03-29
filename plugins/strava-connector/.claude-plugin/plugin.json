@@ -1,0 +1,31 @@
+{
+  "name": "strava-connector",
+  "version": "0.1.1",
+  "description": "Local coaching-focused Strava MCP for athlete profile, workouts, gear, and routes. Requires Claude in Chrome MCP for setup.",
+  "author": {
+    "name": "AgenticCoaching",
+    "email": "support@agenticcoaching.dev",
+    "url": "https://agenticcoaching.dev"
+  },
+  "homepage": "https://github.com/AgenticCoaching/AgenticCoaching",
+  "repository": "https://github.com/AgenticCoaching/AgenticCoaching",
+  "license": "MIT",
+  "keywords": [
+    "strava",
+    "coaching",
+    "fitness",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": {
+    "Strava connector": {
+      "command": "python3",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/scripts/run_local_mcp.py"
+      ],
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      }
+    }
+  }
+}

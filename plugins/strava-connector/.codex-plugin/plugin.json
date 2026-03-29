@@ -1,0 +1,42 @@
+{
+  "name": "strava-connector",
+  "version": "0.1.1",
+  "description": "Local coaching-focused Strava MCP for athlete profile, workouts, gear, and routes.",
+  "author": {
+    "name": "AgenticCoaching",
+    "email": "support@agenticcoaching.dev",
+    "url": "https://agenticcoaching.dev"
+  },
+  "homepage": "https://github.com/AgenticCoaching/AgenticCoaching",
+  "repository": "https://github.com/AgenticCoaching/AgenticCoaching",
+  "license": "MIT",
+  "keywords": [
+    "strava",
+    "coaching",
+    "fitness",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Strava connector",
+    "shortDescription": "Read workouts, update activity metadata, fetch gear, and export routes",
+    "longDescription": "Use a local coaching-focused Strava MCP to inspect athlete profile data, pull structured workout metrics, update activity metadata such as descriptions and assigned gear, and export routes as GPX or TCX for downstream delivery.",
+    "developerName": "AgenticCoaching",
+    "category": "Health & Fitness",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/AgenticCoaching/AgenticCoaching",
+    "privacyPolicyURL": "https://github.com/AgenticCoaching/AgenticCoaching/blob/main/README.md",
+    "termsOfServiceURL": "https://github.com/AgenticCoaching/AgenticCoaching/blob/main/LICENSE",
+    "defaultPrompt": [
+      "Pull recent Strava workouts, fetch coaching metrics, update activity descriptions, and export routes"
+    ],
+    "composerIcon": "./assets/AgenticCoachingLogo.png",
+    "logo": "./assets/AgenticCoachingLogo.png",
+    "screenshots": [],
+    "brandColor": "#FC5200"
+  }
+}

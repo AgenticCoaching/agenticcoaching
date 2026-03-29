@@ -6,8 +6,8 @@
   },
   "plugins": [
     {
-      "name": "connector-strava",
-      "source": "./plugins/connector-strava",
+      "name": "strava-connector",
+      "source": "./plugins/strava-connector",
       "description": "Local coaching-focused Strava MCP for athlete profile, workouts, gear, and routes.",
       "version": "0.1.1",
       "author": {

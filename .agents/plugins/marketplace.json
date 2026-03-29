@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "connector-strava",
+      "name": "strava-connector",
       "source": {
         "source": "local",
-        "path": "./plugins/connector-strava"
+        "path": "./plugins/strava-connector"
       },
       "policy": {
         "installation": "AVAILABLE",

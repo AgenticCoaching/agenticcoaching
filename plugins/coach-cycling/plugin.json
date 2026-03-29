@@ -20,7 +20,7 @@
     "weekly-plan"
   ],
   "dependencies": [
-    "connector-strava",
+    "strava-connector",
     "connector-garmin"
   ],
   "status": "scaffold"

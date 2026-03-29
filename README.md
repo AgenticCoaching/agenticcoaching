@@ -18,7 +18,7 @@ Claude Marketplace-style multi-plugin monorepo for coaching + fitness automation
 ```text
 plugins/
   setup/
-  connector-strava/
+  strava-connector/
   connector-garmin/
   automation-daily-checkin/
   coach-nutrition/

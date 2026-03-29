@@ -22,7 +22,7 @@
   ],
   "dependencies": [
     "automation-daily-checkin",
-    "connector-strava",
+    "strava-connector",
     "connector-garmin"
   ],
   "status": "scaffold"
