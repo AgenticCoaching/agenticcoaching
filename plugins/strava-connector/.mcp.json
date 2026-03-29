@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "Strava connector": {
+    "Strava": {
       "command": "python3",
       "args": [
         "./scripts/run_local_mcp.py"
