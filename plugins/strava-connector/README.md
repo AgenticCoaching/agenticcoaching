@@ -84,4 +84,5 @@ Recommended requested Strava scope set for this connector:
 - `skills/setup-strava-connector/SKILL.md` — local setup flow
 - `skills/sync-recent-workouts/SKILL.md` — scheduled polling sync flow
 - `skills/openclaw-strava-mcp/SKILL.md` — OpenClaw-compatible skill wrapper for this plugin
+- `skills/sync-weight-to-strava/SKILL.md` — optional skill to push new user weight values to Strava via MCP
 - `agents/strava-connector.md` — Claude default agent requiring Claude in Chrome MCP
