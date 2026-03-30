@@ -83,4 +83,5 @@ Recommended requested Strava scope set for this connector:
 - `references/storage-contract.md` — required athlete/day folder ingestion contract.
 - `skills/setup-strava-connector/SKILL.md` — local setup flow
 - `skills/sync-recent-workouts/SKILL.md` — scheduled polling sync flow
+- `skills/openclaw-strava-mcp/SKILL.md` — OpenClaw-compatible skill wrapper for this plugin
 - `agents/strava-connector.md` — Claude default agent requiring Claude in Chrome MCP

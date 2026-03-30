@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+import ssl
 import time
 import urllib.error
 import urllib.parse
@@ -24,6 +25,19 @@ DEFAULT_STREAM_KEYS = [
     "moving",
 ]
 
+
+
+
+def _default_ssl_context() -> ssl.SSLContext:
+    cert_file = os.getenv("SSL_CERT_FILE")
+    if cert_file and os.path.exists(cert_file):
+        return ssl.create_default_context(cafile=cert_file)
+
+    for candidate in ("/etc/ssl/cert.pem", "/etc/ssl/certs/ca-certificates.crt"):
+        if os.path.exists(candidate):
+            return ssl.create_default_context(cafile=candidate)
+
+    return ssl.create_default_context()
 
 class StravaApiError(RuntimeError):
     def __init__(self, status: int, message: str, payload: Optional[Any] = None) -> None:
@@ -87,7 +101,7 @@ class StravaApiClient:
         request.add_header("Content-Type", "application/x-www-form-urlencoded")
 
         try:
-            with urllib.request.urlopen(request, timeout=30) as response:
+            with urllib.request.urlopen(request, timeout=30, context=_default_ssl_context()) as response:
                 payload = json.loads(response.read().decode("utf-8"))
         except urllib.error.HTTPError as exc:
             body = exc.read().decode("utf-8", errors="replace")
@@ -125,7 +139,7 @@ class StravaApiClient:
             request.add_header("Content-Type", "application/json")
 
         try:
-            with urllib.request.urlopen(request, timeout=30) as response:
+            with urllib.request.urlopen(request, timeout=30, context=_default_ssl_context()) as response:
                 raw = response.read()
                 if not raw:
                     return None
